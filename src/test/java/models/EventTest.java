@@ -66,4 +66,9 @@ public class EventTest {
         Event testEvent = new Event(20, "Chicken", "Spirits", "DJ", "FREE DJ");
         assertEquals(850, testEvent.totalCost());
     }
+    @Test
+    public void calculateTotal_FiftyOffTwoHundredGuest() {
+        Event testEvent = new Event(200, "Chicken", "Spirits", "DJ", "FIFTY OFF");
+        assertEquals(850, testEvent.totalCost());
+    }
 }
