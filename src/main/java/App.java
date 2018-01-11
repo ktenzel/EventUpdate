@@ -17,13 +17,13 @@ public class App {
                 System.out.println("How many people will be attending your event?");
                 int guestCount = Integer.parseInt(bufferedReader.readLine());
                 System.out.println("We offer a choice of dishes.");
-                System.out.println("Please choose between Chicken or Vegetarian");
+                System.out.println("Please choose between Chicken is $32 a plate and or Vegetarian is $30");
                 String foodChoice = bufferedReader.readLine();
                 System.out.println("We offer a choice of drinks.");
-                System.out.println("Please choose between Soda or Spirits");
+                System.out.println("Please choose between Soda or Spirits +$3 to plate cost");
                 String drinkChoice = bufferedReader.readLine();
                 System.out.println("We offer a choice of entertainment types.");
-                System.out.println("Please choose between DJ or Live Band");
+                System.out.println("Please choose between DJ (+ $150) or Live Band (+ $500) or press enter to skip entertainment choice.");
                 String entertainmentChoice = bufferedReader.readLine();
                 System.out.println("We offer a couple coupons for groups.");
                 System.out.println("Please enter FREE DJ if you choose a DJ or FIFTY OFF if you had more than 150 guest");

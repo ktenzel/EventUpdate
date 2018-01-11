@@ -65,7 +65,7 @@ public class Event {
             baseCost = baseCost + 500;
         } else if ((this.coupon.equals("FREE DJ")) && (this.guest > 150)) {
             baseCost = baseCost - 150;
-        } else if (this.coupon.equals("FIFTY OFF")){
+        } else if (this.coupon.equals("FIFTY OFF")  && (this.guest > 150)){
             baseCost = baseCost - 50;
         } else {
             baseCost = baseCost;

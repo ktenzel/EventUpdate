@@ -1,14 +1,15 @@
 # _EVENT PLANNING_
 
-#### This program will set up pricing for an event planning request Version 1: 05|01|18
+#### This program will set up pricing for an event planning request
 
 #### By: _**Kyle Tenzeldam**_
 
 
 ## Description
-
+    This program uses Java to determine the cost of an event based on number of guest, food choice, drink choice and entertainment options.
 ## Setup/Installment Requirements
-
+    JAVA
+    IntelliJ
 
 
 
