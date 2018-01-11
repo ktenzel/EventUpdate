@@ -16,6 +16,7 @@ public class Event {
         this.entertainment = entertainment;
         this.coupon = coupon;
     }
+
     public int getGuest() {
         return guest;
     }
@@ -47,28 +48,40 @@ public class Event {
             plate = plate + 2;
         } else {
             plate = plate;
-        } return plate;
+        }
+        return plate;
     }
+
     public int calculateDrink() {
         int plate = calculateFood();
         if (this.drink.equals("Spirits")) {
             plate = plate + 3;
         } else {
-        } return plate;
+        }
+        return plate;
     }
-    public int totalCost() {
+
+    public int calculateEntertainment() {
         int plate = calculateDrink();
         Integer baseCost = plate * this.guest;
         if (this.entertainment.equals("DJ")) {
             baseCost = baseCost + 150;
         } else if (this.entertainment.equals("Live Band")) {
             baseCost = baseCost + 500;
-        } else if ((this.coupon.equals("FREE DJ")) && (this.guest > 150)) {
-            baseCost = baseCost - 150;
-        } else if (this.coupon.equals("FIFTY OFF")  && (this.guest > 150)){
-            baseCost = baseCost - 50;
         } else {
             baseCost = baseCost;
-        } return baseCost;
+        }
+        return baseCost;
     }
-}
+        public int totalCost() {
+            int finalCost = calculateEntertainment();
+            if ((this.coupon.equals("FREE DJ")) && (this.guest > 150)) {
+                finalCost = finalCost - 150;
+            } else if (this.coupon.equals("FIFTY OFF") && (this.guest > 150)) {
+                finalCost = finalCost - 50;
+            } else {
+                finalCost = finalCost;
+            }
+            return finalCost;
+        }
+    }

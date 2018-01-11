@@ -64,11 +64,11 @@ public class EventTest {
     @Test
     public void calculateTotal_Cost() {
         Event testEvent = new Event(20, "Chicken", "Spirits", "DJ", "FREE DJ");
-        assertEquals(850, testEvent.totalCost());
+        assertEquals(850, testEvent.calculateEntertainment());
     }
     @Test
     public void calculateTotal_FiftyOffTwoHundredGuest() {
         Event testEvent = new Event(200, "Chicken", "Spirits", "DJ", "FIFTY OFF");
-        assertEquals(850, testEvent.totalCost());
+        assertEquals(7150, testEvent.totalCost());
     }
 }
